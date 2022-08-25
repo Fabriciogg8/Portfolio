@@ -1,0 +1,507 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color_one: rgb(245,245,220);
+    --color_two: #243236;
+    --color_three: #445D63;
+    --color_four: #8BBECC; 
+    --color_five: #577780;
+    --color_six: #61858F;
+   
+
+    --font_1: Bilbo Swash Caps;
+    --font_2: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    font-size: 62.5%;
+}
+
+/*  Spanish language is blocked */
+
+
+/* ----------HEADER------------- */
+
+header {
+    display: flex;
+    background-image: url('../img/background_header_blue.jpg');
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    background-position: center center;
+    height: 30rem;
+    font-family: var(--font_2)
+}
+
+/* Navigation Bar */
+
+.header-nav {
+    display: flex;
+    width: 100%;
+}
+
+/* Hamburguer */
+
+.header-nav i{
+    position: absolute;
+    top: 1rem;
+    left: 3%;
+}
+
+.header-nav i:hover{
+    cursor: pointer;
+}
+
+/* Hamburguer menu */
+
+.hamburguer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 2.5rem;
+    left: 3%;
+    height: 6rem;
+    align-items: flex-end;
+}
+
+
+/* General unordered list of navbar */
+
+.header-nav-ul {
+    list-style: none;  
+}
+
+
+/*  List items */
+
+.header-nav-ul a{
+    text-decoration: none;
+}
+
+
+.header-nav-ul li{
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: var(--color_four);
+    transition: color 1000ms;
+}
+
+.header-nav-ul li:hover{
+    cursor: pointer;
+    color: var(--color_one);
+} 
+
+/*  Button that change the language */
+
+.language {
+    position: absolute;
+    top: 1rem;
+    right: 3%;
+    background: none;
+    border: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Span that change the name language */
+
+#idiom {
+    color: var(--color_six);
+    font-family: var(--font_2);
+    font-weight: 400;
+}
+
+/* My name container */
+
+.header-name{
+    font-family: var(--font_1);
+    color: var(--color_one);
+    position: absolute;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 400;
+    top: 12rem;
+    text-align: center
+}
+
+/*  Brief */
+.header-brief{
+    color: var(--color_one);
+    position: absolute;
+    top: 15rem;
+    left:15rem;
+    text-align: justify;
+    width: 10rem;
+}
+
+
+/* ---------MAIN--------- */
+
+/* Sections */
+
+section{
+    height: 30rem;
+    display: flex;
+}
+
+
+/* About me */
+
+.about-me {
+    background-color: var(--color_two);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.about-me h1 {
+    color: var(--color_one);
+    font-family: var(--font_2);
+    font-weight: 100;
+    font-size: x-large;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.line{
+    background-color: var(--color_four);
+    height: 0.3rem;
+    width: 9rem;
+    position: absolute;
+    top: 3.5rem;
+    border-radius: 0 30% 30% 0;
+}
+
+.number{
+    color: var(--color_four);
+    position: absolute;
+    font-size: large;
+    font-family: var(--font_1);
+    top:1.5rem;
+    right:1rem;
+}
+
+.number-line{
+    background-color: var(--color_four);
+    height: 0.3rem;
+    width: 0.8rem;
+    border-radius: 50% 0 0 50% ;
+    position: absolute;
+    top:2rem;
+    right:0rem;
+}
+
+
+.about-me p{
+    color: var(--color_one);
+    font-family: var(--font_2);
+    text-align: left;
+    position: absolute;
+    top: 5rem;
+    padding: 0 2rem;
+    
+}
+
+/*  Education  */
+
+.education {
+    background-color: var(--color_three);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.education h1 {
+    color: var(--color_one);
+    font-family: var(--font_2);
+    font-weight: 100;
+    font-size: x-large;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+/* Articles */
+
+.article{
+    position: absolute;
+    top:4rem;
+}
+
+.article h1 {
+    color: var(--color_four);
+    font-size: medium;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article p {
+    color: var(--color_one);
+    font-size: small;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+
+/* Portfolio */
+
+.portfolio {
+    background-color: var(--color_five);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.portfolio h1{
+    color: var(--color_one);
+    font-family: var(--font_2);
+    font-weight: 100;
+    font-size: x-large;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.portfolio-article{
+    position: absolute;
+    top: 6rem;
+    left: 28vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    width: 40vw;
+    height: 40vh;
+}
+
+
+.portfolio-article a {
+    text-decoration: none;
+    display: flex;
+}
+
+.portfolio-article a h1 {
+    margin:0;
+    justify-content: center;
+}
+
+.portfolio-article a h1:hover{
+    cursor: pointer;
+} 
+
+/* Carousel */
+
+
+.carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+ul.slides {
+  display: block;
+  position: relative;
+  height: 100px;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none;
+}
+
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+opacity: 1;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+img{
+  width: 10%;
+  height: 50px;
+}
+
+/* Footer */
+
+footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color_one);
+    height: 8rem;
+    justify-content: space-around;
+}
+.contact {
+    display: flex;
+    color: var(--color_one);
+}
+
+.contact ul {
+    flex-direction: column;
+    display: flex;
+    list-style: none;
+}
+
+.contact ul li{
+    font-size: medium;
+    padding-top: 0.3rem;
+    padding-left: 2rem;
+    color: var(--color_three);
+}
+
+.line.foot{
+    top: 4rem;
+}
+
+.images ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+
+
+i:hover{
+    animation-name: spin;
+    animation-duration: 4s;
+    border-radius: 40%;
+}
+.fa-square-facebook{
+    color: rgb(66 103 178);
+}
+.fa-youtube{
+    color: rgb(255 0 0);
+}
+.fa-twitter{
+    color: rgb(29 161 242);
+}
+
+.fa-linkedin{
+    color:#405DE6;
+}
+
+.fa-square-instagram{ 
+    color: linear-gradient(45deg, #FFDC80, #FCAF45, #F77737, #F56040, #FD1D1D, #E1306C, #C13584, #833AB4, #5B51D8, #405DE6);
+    color: #E1306C;
+}
+
+
+@keyframes spin {
+    20% {transform: scale(50%);}
+    40% {transform: rotate(180deg);}
+    60% {transform: scale(150%);}
+    }
+
+
+/*  Inactive class (it is the last one because it overwrites the other styles) */
+.inactive{
+    display: none;
+}

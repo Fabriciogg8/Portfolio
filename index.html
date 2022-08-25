@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5404195145.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Fabriciogg | Portfolio</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="header-nav">
+        <i class="fa-solid fa-bars fa-2x" id="hamburguer"></i>
+
+        <div class="hamburguer">
+          <ul class="header-nav-ul eng">
+            <a href="#about-me">
+              <li>About me</li>
+            </a>
+            <a href="#education">
+              <li>Education</li>
+            </a>
+            <a href="#portfolio">
+              <li>Portfolio</li>
+            </a>
+            <a href="#say-hello">
+              <li>Say hello!</li>
+            </a>
+          </ul>
+          <ul class="header-nav-ul esp inactive">
+            <a href="#about-me">
+              <li>Quien soy?</li>
+            </a>
+            <a href="#education">
+              <li>Formación</li>
+            </a>
+            <a href="#portfolio">
+              <li>Portafolio</li>
+            </a>
+            <a href="#say-hello">
+              <li>Saludame!</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-name" id="header-name">Fabricio González Guasque</div>
+      <!-- <div class="header-brief eng">
+            On this website I introduce myself, and I show the different things that I have studied and in which I have worked. I hope you enjoy it!
+        </div>
+        <div class="header-brief esp inactive">
+            En esta web me presento, y muestro las diferentes cosas que he estudiado y en las que he trabajado. ¡Espero que lo disfruten!
+        </div> -->
+      <div class="language">
+        <i class="fa-solid fa-earth-americas fa-2x"></i>
+        <span id="idiom"> ENG </span>
+      </div>
+    </header>
+    <main>
+      <section class="about-me" id="about-me">
+        <h1 class="eng">About me</h1>
+        <h1 class="esp inactive">Quien soy?</h1>
+        <div class="line"></div>
+        <div class="number">01</div>
+        <div class="number-line"></div>
+        <p class="eng">
+          I'm 36 years old, and I live in Uruguay. I'm the father of a
+          7-year-old girl named Guillermina. I'm graduated of the Universidad de
+          la República (UDELAR) in the career of Agronomic Engineer, and I'm
+          also studying programming. One of the things that I enjoy the most is
+          practicing sports, especially soccer. I also like to plant trees and
+          turn them into bonsai. Since I was a kid I liked computers, and lately
+          I got into the world of programming. I expect to continuing studying
+          more about the different technologies, and hoping to get a job in this
+          industry.
+        </p>
+        <p class="esp inactive">
+          Tengo 36 años y vivo en Uruguay. Soy padre de una niña de 7 años
+          llamada Guillermina. Soy egresado de la Universidad de la República
+          (UDELAR) en la carrera de Ingeniero Agrónomo, y también estoy
+          estudiando programación. Una de las cosas que más disfruto es
+          practicar deportes, especialmente fútbol. También me gusta plantar
+          árboles y convertirlos en bonsáis. Desde niño me gustaron las
+          computadoras, y últimamente me metí en el mundo de la programación.
+          Espero seguir estudiando más sobre las diferentes tecnologías y con la
+          esperanza de conseguir un trabajo en esta industria.
+        </p>
+      </section>
+      <section class="education" id="education">
+        <h1 class="eng">Education</h1>
+        <h1 class="esp inactive">Formación</h1>
+        <div class="line"></div>
+        <div class="number">02</div>
+        <div class="number-line"></div>
+        <article class="article eng">
+          <h1>Digital House</h1>
+          <p>Certified Tech Developer, Information Technology · (may 2022)</p>
+          <h1>Sembrando TIC</h1>
+          <p>Junior Programmer · (march 2021 - december 2021)</p>
+          <h1>Platzi</h1>
+          <p>Online School of Technology · (december 2020)</p>
+        </article>
+        <article class="article esp inactive">
+          <h1>Digital House</h1>
+          <p>
+            Técnico Desarrollador Certificado, Tecnología de la Información ·
+            (mayo 2022)
+          </p>
+          <h1>Sembrando TIC</h1>
+          <p>Programador Junior · (marzo 2021 - diciembre 2021)</p>
+          <h1>Platzi</h1>
+          <p>Escuela online de Tecnología · (december 2020)</p>
+        </article>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <h1 class="eng">Portfolio</h1>
+        <h1 class="esp inactive">Portafolio</h1>
+        <div class="line"></div>
+        <div class="number">03</div>
+        <div class="number-line"></div>
+        <article class="portfolio-article">
+          <a href="frontend.html">
+            <h1>Frontend</h1>
+          </a>
+          <div class="carousel">
+            <ul class="slides">
+              <input type="radio" name="radio-buttons" id="img-1" checked />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img class="changeImg" src="./img/1.png" alt="js" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-3" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-2" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttons" id="img-2" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img class="changeImg" alt="image" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-1" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-3" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttons" id="img-3" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img class="changeImg"  alt="image" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-2" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-1" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <div class="carousel-dots">
+                <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+              </div>
+            </ul>
+          </div>
+          <a href="backend.html">
+            <h1>Backend</h1>
+          </a>
+        </article>
+      </section>
+    </main>
+    <footer id="say-hello">
+      <div class="contact">
+        <ul>
+          <li class="eng">Contact</li>
+          <li class="esp inactive">Contacto</li>
+          <li class="line foot"></li>
+          <li>email : fgonzalezguasque@gmail.com</li>
+        </ul>
+      </div>
+      <div class="images">
+        <ul class="social-network">
+          <li id="Fb-logo">
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-square-facebook fa-3x"></i
+            ></a>
+          </li>
+          <li id="Ytb-logo">
+            <a href="https://www.youtube.com/channel/UCTP0ipK6d2AQ0mQfLJJ_irw"
+              ><i class="fa-brands fa-youtube fa-3x"></i
+            ></a>
+          </li>
+          <li id="Twtt-logo">
+            <a href="https://twitter.com/Fabriciogg8"
+              ><i class="fa-brands fa-twitter fa-3x"></i
+            ></a>
+          </li>
+          <li id="Lnkd-logo">
+            <a
+              href="https://www.linkedin.com/in/fabricio-gonz%C3%A1lez-guasque-67878b46/"
+              ><i class="fa-brands fa-linkedin fa-3x"></i
+            ></a>
+          </li>
+          <li id="Int-logo">
+            <a href="https://instagram.com/"
+              ><i class="fa-brands fa-square-instagram fa-3x"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
