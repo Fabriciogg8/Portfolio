@@ -21,7 +21,7 @@ function changeLanguage(){
     });
 
     // Change the color of the world image
-    let color_one = 'darkgray'
+    let color_one = 'darkgray' // I'm not using it
     let color_two = 'darkslategrey'
   
     if (earthIcon.style.color === color_two){
@@ -58,16 +58,16 @@ function showHamburguer(){
 const changeDataButtons = document.querySelectorAll(".carousel-dot")
 // Execute the function if one of the buttons is clicked, and we change the portfolio atribute, for english or spanish
 for (const button of changeDataButtons) {
-    button.addEventListener('click',  () =>  {if (idiom.textContent == 'ENG'){
-        showPortfolioPages(myPortfolios);
-    } else {showPortfolioPages(miPortafolio);}});
+    button.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
+        showPortfolioPages(miPortafolio)
+    } else {showPortfolioPages(myPortfolios);}});
 }
 
 const changeDataArrows = document.querySelectorAll(".carousel-controls")
 for (const button of changeDataArrows) {
-    button.addEventListener('click',  () =>  {if (idiom.textContent == 'ENG'){
-        showPortfolioPages(myPortfolios);
-    } else {showPortfolioPages(miPortafolio);}});
+    button.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
+        showPortfolioPages(miPortafolio);
+    } else {showPortfolioPages(myPortfolios);}});
 }
 
 // Engilsh Porfolio
@@ -75,11 +75,11 @@ const myPortfolios = [
     {
         name: "Responsive Design Heros",
         url: "https://fabriciogg8.github.io/Responsive_design/",
-        image: "./img/2.png",
+        image: "./img/Heroes.png",
         abstract: "Page with responsive design, with images of super heroes and a brief description." 
     },
     {
-        name: "Practico Frontend Developer",
+        name: "Frontend Developer Practic",
         url: "https://fabriciogg8.github.io/Responsive_design/",
         image: "./img/3.png"  
     },
@@ -95,7 +95,7 @@ const miPortafolio = [
     {
         name: "Heroes Diseno Responsivo",
         url: "https://fabriciogg8.github.io/Responsive_design/",
-        image: "./img/2.png",
+        image: "./img/Heroes.png",
         abstract: "Pagina con diseno responsive, con imagenes de super heroes y una breve descripcion." 
     },
     {
@@ -116,34 +116,42 @@ const miPortafolio = [
 var contador = 0;
 
 function showPortfolioPages(portfolios){
-        if (contador >= portfolios.length)
-        {contador = 0}
-        console.log(portfolios[contador])
-        const divsImages = document.querySelectorAll('.changeImg');
-        for (div of divsImages){
-            div.setAttribute('src', portfolios[contador].image);
+    
+    if (contador >= portfolios.length)
+    {contador = 0}
+    console.log(portfolios[contador])
+    const divsImages = document.querySelectorAll('.changeImg');
+    for (div of divsImages){
+        div.setAttribute('src', portfolios[contador].image);
 
-        }
-        const divFather = document.querySelector('.carousel');
-        // If the father already has a child, we remove it    
-        if (contador != 0 || contador != portfolios.length){
-            let last = divFather.lastChild;
-            divFather.removeChild(last);
-        }
-        
-        // Creates node that show all the info of the portfolio
-        const pageInfoDiv = document.createElement('div');
-        // I give the node a name, so I can track if it exists
-        pageInfoDiv.classList.add('new-son')
-        pageInfoDiv.innerText = portfolios[contador].name;
-        
-        const urlContainer = document.createElement('a'); 
-        urlContainer.innerHTML = portfolios[contador].url
-        pageInfoDiv.appendChild(urlContainer)
-
-        divFather.appendChild(pageInfoDiv);
-        console.log(portfolios[contador].name)
-        contador ++
     }
+    const divFather = document.querySelector('.carousel');
+    // If the father already has a child, we remove it    
+    if (contador != 0 || contador != portfolios.length){
+        let last = divFather.lastChild;
+        divFather.removeChild(last);
+    }
+    
+    // Creates node that show all the info of the portfolio
+    const pageInfoDiv = document.createElement('div');
+    // I give the node a name, so I can track if it exists
+    pageInfoDiv.classList.add('new-son')
+    pageInfoDiv.innerText = portfolios[contador].name;
+    
+    const urlContainer = document.createElement('a'); 
+    urlContainer.setAttribute("href", portfolios[contador].url)
+    urlContainer.innerHTML = "Go Link"
+    pageInfoDiv.appendChild(urlContainer)
+    
+    divFather.appendChild(pageInfoDiv);
+    console.log(portfolios[contador].name)
+    contador ++
+
+    //I remove the p tag where I had the phrase to click in the pc image
+    let clickTile = document.querySelector('.disable');
+    if(document.body.contains(clickTile)){
+        clickTile.remove();
+    }
+}
 
 
