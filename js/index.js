@@ -74,13 +74,14 @@ for (const button of changeDataArrows) {
 const myPortfolios = [
     {
         name: "Responsive Design Heros",
-        url: "https://fabriciogg8.github.io/Responsive_design/",
+        url: "https://fabriciogg8.github.io/Responsive_design_heros/",
         image: "./img/Heroes.png",
-        abstract: "Page with responsive design, with images of super heroes and a brief description." 
+        abstract: "Abstract: Page with responsive design, with images of super heroes and a brief description.",
+        readme: "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md"
     },
     {
         name: "Frontend Developer Practic",
-        url: "https://fabriciogg8.github.io/Responsive_design/",
+        url: "https://fabriciogg8.github.io/Responsive_design_heros/",
         image: "./img/3.png"  
     },
     {
@@ -93,10 +94,11 @@ const myPortfolios = [
 // Spanish Potfolio
 const miPortafolio = [
     {
-        name: "Heroes Diseno Responsivo",
-        url: "https://fabriciogg8.github.io/Responsive_design/",
+        name: "Héroes Diseño Responsivo",
+        url: "https://fabriciogg8.github.io/Responsive_design_heros/",
         image: "./img/Heroes.png",
-        abstract: "Pagina con diseno responsive, con imagenes de super heroes y una breve descripcion." 
+        abstract: "Resumen: Página con diseño responsivo, con imágenes de súper héroes y una breve descripción.",
+        readme: "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md" 
     },
     {
         name: "Practico Frontend Developer",
@@ -137,12 +139,20 @@ function showPortfolioPages(portfolios){
     // I give the node a name, so I can track if it exists
     pageInfoDiv.classList.add('new-son')
     pageInfoDiv.innerText = portfolios[contador].name;
+    // Abstract
+    const abstract = document.createElement('h6');
+    abstract.innerHTML =  portfolios[contador].abstract; 
+    pageInfoDiv.appendChild(abstract)
     
+    // url of the repository
     const urlContainer = document.createElement('a'); 
     urlContainer.setAttribute("href", portfolios[contador].url)
     urlContainer.innerHTML = "Go Link"
     pageInfoDiv.appendChild(urlContainer)
-    
+
+    // link to github
+
+
     divFather.appendChild(pageInfoDiv);
     console.log(portfolios[contador].name)
     contador ++

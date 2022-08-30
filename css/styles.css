@@ -249,6 +249,7 @@ section{
 .portfolio {
     background-color: var(--color_five);
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     position: relative;
 }
@@ -264,15 +265,13 @@ section{
 }
 
 .portfolio-article{
-    position: absolute;
-    top: 6rem;
-    left: 25vw;
+    margin-top: 3rem;
+    padding: 0 2rem 0 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items:center;
     justify-content: space-around;
-    width: fit-content;
     height: auto;
 }
 
@@ -294,9 +293,20 @@ section{
 
 /*  Style to div created in JavaScript*/
 .new-son {
+    display: flex;
+    flex-direction: column;
     margin-top: 0.5rem;
+    align-items: center;
     color: var(--color_two);
     font-size: medium;
+}
+
+.new-son h6{
+    color: var(--color_two);
+    font-family: var(--font_2);
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: .5rem 0 .5rem 0;
 }
 
 .portfolio-article a {
@@ -318,8 +328,10 @@ section{
 
 
 .carousel {
-    margin-left: 15%;
-    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
   }
   
 ul.slides {
@@ -366,9 +378,6 @@ ul.slides input {
   width: auto;
   min-width: 100%;
   height: 100%;
-}
-.carousel{
-    margin-bottom: 1rem;
 }
 
 .carousel-controls {
