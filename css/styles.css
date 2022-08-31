@@ -252,6 +252,7 @@ section{
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
+    height: 45rem;
 }
 
 .portfolio h1{
@@ -283,7 +284,7 @@ section{
     height: 3rem;
 }
 
-.disable {
+.disable, .disable-two {
     color: var(--color_two);
     font-family: var(--font_2);
     font-weight: 400;
@@ -327,7 +328,7 @@ section{
 /* Carousel */
 
 
-.carousel {
+.carousel, .carouselTwo{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -452,18 +453,21 @@ input:checked + .slide-container .carousel-controls label {
 
 input#img-1:checked ~ .carousel-dots label#img-dot-1,
 input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+input#img-3:checked ~ .carousel-dots label#img-dot-3 {
 opacity: 1;
 }
 
 input:checked + .slide-container .nav label { display: block; }
 
-img{
-  width: 10%;
-  height: 50px;
+
+/* BACKEND */
+#backend-title{
+    margin-top: 2rem;
+}
+
+.changeImgTwo{
+    width: 200px;
+    height: 10%;
 }
 
 /* Footer */

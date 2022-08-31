@@ -55,22 +55,24 @@ function showHamburguer(){
  ****************************************************/
 
 // Take the buttons that execute the function
+// FRONTEND ---------------------------------------
 const changeDataButtons = document.querySelectorAll(".carousel-dot")
 // Execute the function if one of the buttons is clicked, and we change the portfolio atribute, for english or spanish
 for (const button of changeDataButtons) {
     button.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
-        showPortfolioPages(miPortafolio)
-    } else {showPortfolioPages(myPortfolios);}});
+        showPortfolioPages(miPortafolio, '.changeImg', '.carousel')
+    } else {showPortfolioPages(myPortfolios, '.changeImg', '.carousel');}});
 }
 
 const changeDataArrows = document.querySelectorAll(".carousel-controls")
 for (const button of changeDataArrows) {
     button.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
-        showPortfolioPages(miPortafolio);
-    } else {showPortfolioPages(myPortfolios);}});
+        showPortfolioPages(miPortafolio, '.changeImg', '.carousel');
+    } else {showPortfolioPages(myPortfolios, '.changeImg', '.carousel');}});
 }
 
-// Engilsh Porfolio
+
+// Engilsh Porfolio Frontend
 const myPortfolios = [
     {
         name: "Responsive Design Heros",
@@ -91,7 +93,7 @@ const myPortfolios = [
     }
 ]
 
-// Spanish Potfolio
+// Spanish Potfolio Frontend
 const miPortafolio = [
     {
         name: "Héroes Diseño Responsivo",
@@ -112,22 +114,21 @@ const miPortafolio = [
     }
 ]
 
-
 // Function that iterates the array to show the diferent values
 // I use a var (variable) to keep track of how many times the function is pressed
 var contador = 0;
 
-function showPortfolioPages(portfolios){
+function showPortfolioPages(portfolios, boxImg, boxFather){
     
     if (contador >= portfolios.length)
     {contador = 0}
     console.log(portfolios[contador])
-    const divsImages = document.querySelectorAll('.changeImg');
+    const divsImages = document.querySelectorAll(boxImg);
     for (div of divsImages){
         div.setAttribute('src', portfolios[contador].image);
 
     }
-    const divFather = document.querySelector('.carousel');
+    const divFather = document.querySelector(boxFather);
     // If the father already has a child, we remove it    
     if (contador != 0 || contador != portfolios.length){
         let last = divFather.lastChild;
@@ -165,3 +166,67 @@ function showPortfolioPages(portfolios){
 }
 
 
+// BACKEND ---------------------------------------
+const divImageTwo = document.querySelector(".slide-image-two")
+// Execute the function if the div is clicked, and we change the portfolio atribute, for english or spanish
+divImageTwo.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
+        showPortfolioBackend(miPortafolioBackend)
+    } else {showPortfolioBackend(myPortfolioBackend);}});
+
+
+
+const myPortfolioBackend = [
+    {
+        name: "Backend",
+        url: "Backend",
+        image: "./img/1.png",
+        abstract: "Backend",
+        readme: "Backend" 
+    },
+    {
+        name: "Backend",
+        url: "Backend",
+        image: "./img/2.png"  
+    },
+    {
+        name: "Backend",
+        url: "Backend",
+        image: "./img/3.png"
+    }
+]
+
+// Spanish Potfolio Backend
+const miPortafolioBackend = [
+    {
+        name: "Backend",
+        url: "Backend",
+        image: "./img/1.png",
+        abstract: "Backend",
+        readme: "Backend" 
+    },
+    {
+        name: "Backend",
+        url: "Backend",
+        image: "./img/2.png"  
+    },
+    {
+        name: "Backend",
+        url: "Backend",
+        image: "./img/3.png",
+    }
+]
+
+var contadorTwo = 0;
+
+function showPortfolioBackend(portfolioBackend){
+    // We remove the paragraph that says 'touch the image'...'
+    const titleTouch = document.querySelector('.disable-two ')
+    titleTouch.classList.add('inactive')
+
+    contadorTwo ++;
+    if (contadorTwo >= portfolioBackend.length)
+    {contadorTwo = 0}
+    console.log(portfolioBackend[contadorTwo])
+    const divImg = document.querySelector('.changeImgTwo');
+    divImg.setAttribute('src', portfolioBackend[contadorTwo].image);
+}; 
