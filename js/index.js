@@ -1,53 +1,54 @@
-const language = document.querySelector('.language'); 
-const earthIcon = document.querySelector('.fa-earth-americas')
-const espanol = document.querySelectorAll('.esp');
-const english = document.querySelectorAll('.eng');
-const idiom = document.querySelector('#idiom');
+const language = document.querySelector(".language");
+const earthIcon = document.querySelector(".fa-earth-americas");
+const espanol = document.querySelectorAll(".esp");
+const english = document.querySelectorAll(".eng");
+const idiom = document.querySelector("#idiom");
 
-const hamburguer = document.querySelector('#hamburguer')
-const menuBurguer = document.querySelector('.hamburguer')
+const hamburguer = document.querySelector("#hamburguer");
+const menuBurguer = document.querySelector(".hamburguer");
 
 /*******************************************
         Logic to change the language 
 ********************************************/
-language.addEventListener('click', changeLanguage);
+language.addEventListener("click", changeLanguage);
 
-function changeLanguage(){
-    espanol.forEach(element => {
-        element.classList.toggle('inactive');
-    });
-    english.forEach(element => {
-        element.classList.toggle('inactive');
-    });
+function changeLanguage() {
+  espanol.forEach((element) => {
+    element.classList.toggle("inactive");
+  });
+  english.forEach((element) => {
+    element.classList.toggle("inactive");
+  });
 
-    // Change the color of the world image
-    let color_one = 'darkgray' // I'm not using it
-    let color_two = 'darkslategrey'
-  
-    if (earthIcon.style.color === color_two){
-        earthIcon.style.color = ''; //Empty uses the default color
-    } else {
-        earthIcon.style.color = color_two; 
-    }
+  // Change the color of the world image
+  let color_one = "darkgray"; // I'm not using it
+  let color_two = "darkslategrey";
 
-    // Change the text of the span
-    let esp = 'ESP';
-    let eng = 'ENG';
+  if (earthIcon.style.color === color_two) {
+    earthIcon.style.color = ""; //Empty uses the default color
+  } else {
+    earthIcon.style.color = color_two;
+  }
 
-    if (idiom.textContent == esp){
-        idiom.textContent = eng;
-    } else {idiom.textContent = esp};
+  // Change the text of the span
+  let esp = "ESP";
+  let eng = "ENG";
 
+  if (idiom.textContent == esp) {
+    idiom.textContent = eng;
+  } else {
+    idiom.textContent = esp;
+  }
 }
 
 /*******************************************
         Logic to show the Menu in mobile 
 ********************************************/
 
-hamburguer.addEventListener('click', showHamburguer);
+hamburguer.addEventListener("click", showHamburguer);
 
-function showHamburguer(){
-    menuBurguer.classList.toggle('inactive')
+function showHamburguer() {
+  menuBurguer.classList.toggle("inactive");
 }
 
 /***************************************************
@@ -56,177 +57,239 @@ function showHamburguer(){
 
 // Take the buttons that execute the function
 // FRONTEND ---------------------------------------
-const changeDataButtons = document.querySelectorAll(".carousel-dot")
+const changeDataButtons = document.querySelectorAll(".carousel-dot");
 // Execute the function if one of the buttons is clicked, and we change the portfolio atribute, for english or spanish
 for (const button of changeDataButtons) {
-    button.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
-        showPortfolioPages(miPortafolio, '.changeImg', '.carousel')
-    } else {showPortfolioPages(myPortfolios, '.changeImg', '.carousel');}});
+  button.addEventListener("click", () => {
+    if (idiom.textContent == "ESP") {
+      showPortfolioPages(miPortafolio, ".changeImg", ".carousel");
+    } else {
+      showPortfolioPages(myPortfolios, ".changeImg", ".carousel");
+    }
+  });
 }
 
-const changeDataArrows = document.querySelectorAll(".carousel-controls")
+const changeDataArrows = document.querySelectorAll(".carousel-controls");
 for (const button of changeDataArrows) {
-    button.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
-        showPortfolioPages(miPortafolio, '.changeImg', '.carousel');
-    } else {showPortfolioPages(myPortfolios, '.changeImg', '.carousel');}});
+  button.addEventListener("click", () => {
+    if (idiom.textContent == "ESP") {
+      showPortfolioPages(miPortafolio, ".changeImg", ".carousel");
+    } else {
+      showPortfolioPages(myPortfolios, ".changeImg", ".carousel");
+    }
+  });
 }
-
 
 // Engilsh Porfolio Frontend
 const myPortfolios = [
-    {
-        name: "Responsive Design Heros",
-        url: "https://fabriciogg8.github.io/Responsive_design_heros/",
-        image: "./img/Heroes.png",
-        abstract: "Abstract: Page with responsive design, with images of super heroes and a brief description.",
-        readme: "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md"
-    },
-    {
-        name: "Frontend Developer Practic",
-        url: "https://fabriciogg8.github.io/Responsive_design_heros/",
-        image: "./img/3.png"  
-    },
-    {
-        name: "API Dogs JavaScript",
-        url: "https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html",
-        image: "./img/JS_perros.png"
-    }
-]
+  {
+    name: "Responsive Design Heros",
+    url: "https://fabriciogg8.github.io/Responsive_design_heros/",
+    image: "./img/Heroes.png",
+    abstract:
+      "Abstract: Page with responsive design, with images of super heroes and a brief description.",
+    readme:
+      "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md",
+  },
+  {
+    name: "Frontend Developer Practic",
+    url: "https://fabriciogg8.github.io/Responsive_design_heros/",
+    image: "./img/3.png",
+  },
+  {
+    name: "API Dogs JavaScript",
+    url: "https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html",
+    image: "./img/JS_perros.png",
+  },
+];
 
 // Spanish Potfolio Frontend
 const miPortafolio = [
-    {
-        name: "Héroes Diseño Responsivo",
-        url: "https://fabriciogg8.github.io/Responsive_design_heros/",
-        image: "./img/Heroes.png",
-        abstract: "Resumen: Página con diseño responsivo, con imágenes de súper héroes y una breve descripción.",
-        readme: "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md" 
-    },
-    {
-        name: "Practico Frontend Developer",
-        url: "https://fabriciogg8.github.io/Responsive_design/",
-        image: "./img/3.png"  
-    },
-    {
-        name: "API Perros JavaScript",
-        url: "https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html",
-        image: "./img/JS_perros.png"
-    }
-]
+  {
+    name: "Héroes Diseño Responsivo",
+    url: "https://fabriciogg8.github.io/Responsive_design_heros/",
+    image: "./img/Heroes.png",
+    abstract:
+      "Resumen: Página con diseño responsivo, con imágenes de súper héroes y una breve descripción.",
+    readme:
+      "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md",
+  },
+  {
+    name: "Practico Frontend Developer",
+    url: "https://fabriciogg8.github.io/Responsive_design/",
+    image: "./img/3.png",
+  },
+  {
+    name: "API Perros JavaScript",
+    url: "https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html",
+    image: "./img/JS_perros.png",
+  },
+];
 
 // Function that iterates the array to show the diferent values
 // I use a var (variable) to keep track of how many times the function is pressed
 var contador = 0;
 
-function showPortfolioPages(portfolios, boxImg, boxFather){
-    
-    if (contador >= portfolios.length)
-    {contador = 0}
-    console.log(portfolios[contador])
-    const divsImages = document.querySelectorAll(boxImg);
-    for (div of divsImages){
-        div.setAttribute('src', portfolios[contador].image);
+function showPortfolioPages(portfolios, boxImg, boxFather) {
+  if (contador >= portfolios.length) {
+    contador = 0;
+  }
+  console.log(portfolios[contador]);
+  const divsImages = document.querySelectorAll(boxImg);
+  for (div of divsImages) {
+    div.setAttribute("src", portfolios[contador].image);
+  }
+  const divFather = document.querySelector(boxFather);
+  // If the father already has a child, we remove it
+  if (contador != 0 || contador != portfolios.length) {
+    let last = divFather.lastChild;
+    divFather.removeChild(last);
+  }
 
-    }
-    const divFather = document.querySelector(boxFather);
-    // If the father already has a child, we remove it    
-    if (contador != 0 || contador != portfolios.length){
-        let last = divFather.lastChild;
-        divFather.removeChild(last);
-    }
-    
-    // Creates node that show all the info of the portfolio
-    const pageInfoDiv = document.createElement('div');
-    // I give the node a name, so I can track if it exists
-    pageInfoDiv.classList.add('new-son')
-    pageInfoDiv.innerText = portfolios[contador].name;
-    // Abstract
-    const abstract = document.createElement('h6');
-    abstract.innerHTML =  portfolios[contador].abstract; 
-    pageInfoDiv.appendChild(abstract)
-    
-    // url of the repository
-    const urlContainer = document.createElement('a'); 
-    urlContainer.setAttribute("href", portfolios[contador].url)
-    urlContainer.innerHTML = "Go Link"
-    pageInfoDiv.appendChild(urlContainer)
+  // Creates node that show all the info of the portfolio
+  const pageInfoDiv = document.createElement("div");
+  // I give the node a name, so I can track if it exists
+  pageInfoDiv.classList.add("new-son");
+  pageInfoDiv.innerText = portfolios[contador].name;
+  // Abstract
+  const abstract = document.createElement("h6");
+  abstract.innerHTML = portfolios[contador].abstract;
+  pageInfoDiv.appendChild(abstract);
 
-    // link to github
+  // url of the repository
+  const urlContainer = document.createElement("a");
+  urlContainer.setAttribute("href", portfolios[contador].url);
+  urlContainer.innerHTML = "Go Link";
+  pageInfoDiv.appendChild(urlContainer);
 
+  // link to github
 
-    divFather.appendChild(pageInfoDiv);
-    console.log(portfolios[contador].name)
-    contador ++
+  divFather.appendChild(pageInfoDiv);
+  console.log(portfolios[contador].name);
+  contador++;
 
-    //I remove the p tag where I had the phrase to click in the pc image
-    let clickTile = document.querySelector('.disable');
-    if(document.body.contains(clickTile)){
-        clickTile.remove();
-    }
+  //I remove the p tag where I had the phrase to click in the pc image
+  let clickTile = document.querySelector(".disable");
+  if (document.body.contains(clickTile)) {
+    clickTile.remove();
+  }
 }
 
-
 // BACKEND ---------------------------------------
-const divImageTwo = document.querySelector(".slide-image-two")
+const divImageTwo = document.querySelector(".slide-image-two");
 // Execute the function if the div is clicked, and we change the portfolio atribute, for english or spanish
-divImageTwo.addEventListener('click',  () =>  {if (idiom.textContent == 'ESP'){
-        showPortfolioBackend(miPortafolioBackend)
-    } else {showPortfolioBackend(myPortfolioBackend);}});
+divImageTwo.addEventListener("click", () => {
+  if (idiom.textContent == "ESP") {
+    showPortfolioBackend(miPortafolioBackend);
+  } else {
+    showPortfolioBackend(myPortfolioBackend);
+  }
+});
 
-
-
+// English Potfolio Backend
 const myPortfolioBackend = [
-    {
-        name: "Backend",
-        url: "Backend",
-        image: "./img/1.png",
-        abstract: "Backend",
-        readme: "Backend" 
-    },
-    {
-        name: "Backend",
-        url: "Backend",
-        image: "./img/2.png"  
-    },
-    {
-        name: "Backend",
-        url: "Backend",
-        image: "./img/3.png"
-    }
-]
+  {
+    name: "JavaScript API REST Dogs",
+    url: "https://fabriciogg8.github.io/JavaScript_API_REST_Dogs/",
+    image: "./img/javascript_api.jpg",
+    abstract: "Abstract: Consume a REST API with JavaScript. Realize the communication flow between Frontend and Backend and make asynchronous requests using fetch.",
+    readme: "https://github.com/Fabriciogg8/JavaScript_API_REST_Dogs#readme",
+  },
+  {
+    name: "JAVA Basic",
+    url: "https://github.com/Fabriciogg8/Java_basics",
+    image: "./img/JavaLogo.png",
+    abstract: "Resolutions of basic exercises with JAVA language",
+    readme: "https://github.com/Fabriciogg8/Java_basics"
+  },
+  {
+    name: "Backend",
+    url: "Backend",
+    image: "./img/3.png",
+  },
+];
 
 // Spanish Potfolio Backend
 const miPortafolioBackend = [
-    {
-        name: "Backend",
-        url: "Backend",
-        image: "./img/1.png",
-        abstract: "Backend",
-        readme: "Backend" 
-    },
-    {
-        name: "Backend",
-        url: "Backend",
-        image: "./img/2.png"  
-    },
-    {
-        name: "Backend",
-        url: "Backend",
-        image: "./img/3.png",
-    }
-]
+  {
+      name: "JavaScript API REST Dogs",
+      url: "https://fabriciogg8.github.io/JavaScript_API_REST_Dogs/",
+      image: "./img/javascript_api.jpg",
+      abstract: "Resumen: Consumir una API REST con JavaScript. Realizar el flujo de comunicación entre Frontend y Backend y hacer solicitudes asíncronas usando fetch.",
+      readme: "https://github.com/Fabriciogg8/JavaScript_API_REST_Dogs#readme",
+  },
+  {
+    name: "JAVA Basico",
+    url: "https://github.com/Fabriciogg8/Java_basics",
+    image: "./img/JavaLogo.png",
+    abstract: "Resoluciones de ejercicios basicos con lenguaje JAVA",
+    readme: "https://github.com/Fabriciogg8/Java_basics"
+  },
+  {
+    name: "Backend",
+    url: "Backend",
+    image: "./img/3.png",
+  },
+];
 
 var contadorTwo = 0;
 
-function showPortfolioBackend(portfolioBackend){
-    // We remove the paragraph that says 'touch the image'...'
-    const titleTouch = document.querySelector('.disable-two ')
-    titleTouch.classList.add('inactive')
+function showPortfolioBackend(portfolioBackend) {
+  // Add 1 to the contadorTwo variable so I can iterate the array. 
+  contadorTwo++;
+  if (contadorTwo >= portfolioBackend.length) {
+    contadorTwo = 0;
+  }
+  
+  const divImg = document.querySelector(".changeImgTwo");
+  divImg.setAttribute("src", portfolioBackend[contadorTwo].image);
 
-    contadorTwo ++;
-    if (contadorTwo >= portfolioBackend.length)
-    {contadorTwo = 0}
-    console.log(portfolioBackend[contadorTwo])
-    const divImg = document.querySelector('.changeImgTwo');
-    divImg.setAttribute('src', portfolioBackend[contadorTwo].image);
-}; 
+  const divBackFather = document.querySelector(".slide-image-two")
+  // If the father already has a child, we remove it
+  if (contadorTwo != 0 || contadorTwo != portfolioBackend.length) {
+    let last = divBackFather.lastChild;
+    divBackFather.removeChild(last);
+  }
+
+  // Creates node that show all the info of the portfolio
+  const pageInfoDivBack = document.createElement("div");
+  // I give the node a name, so I can track if it exists
+  pageInfoDivBack.classList.add("new-son");
+
+  // Repository name: Create a <u> for place it
+  const underlineTitle = document.createElement("u")
+  underlineTitle.innerText = portfolioBackend[contadorTwo].name;
+  pageInfoDivBack.appendChild(underlineTitle);
+
+  // Abstract: h6 tag
+  const abstractBack = document.createElement("h6");
+  abstractBack.innerHTML = portfolioBackend[contadorTwo].abstract;
+  pageInfoDivBack.appendChild(abstractBack);
+
+  // Url: an <a> tag
+  const urlContainer = document.createElement("a");
+  urlContainer.setAttribute("href", portfolioBackend[contadorTwo].url);
+  if (idiom.textContent == "ESP") {
+    urlContainer.innerHTML = "Ver repositorio";
+  } else {
+    urlContainer.innerHTML = "View repository";
+  }
+ 
+  pageInfoDivBack.appendChild(urlContainer);
+
+  // link to github: an <a> tag
+  const readmeBack = document.createElement("a");
+  readmeBack.setAttribute("href", portfolioBackend[contadorTwo].readme);
+  readmeBack.innerHTML = "Github readme";
+  pageInfoDivBack.appendChild(readmeBack);
+
+  // Append the div with the info to the father
+  divBackFather.appendChild(pageInfoDivBack);
+  console.log("Contador es = " + contadorTwo)
+
+  //I remove the p tag where I had the phrase to click in the pc image
+  let clickTile = document.querySelector(".disable-two");
+  if (document.body.contains(clickTile)) {
+    clickTile.remove();
+  }
+}

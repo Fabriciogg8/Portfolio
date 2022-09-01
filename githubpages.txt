@@ -1,6 +1,14 @@
-https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html  
+FRONTEND
+https://fabriciogg8.github.io/Responsive_design/                                 (Hecho)
+
+
 https://fabriciogg8.github.io/practico_fronted_developer/6_pagina_inicio.html    (El css está en el html, las imagenes no andan (cargarlas) y armar Readme)
 https://fabriciogg8.github.io/curso-frontend-developer-JavaScript-practico/      (Cambiar en el inde.html el mail que dice Platzi)
 https://fabriciogg8.github.io/JavaScript_basic/DOM/index.html                    (Muy básico)
-https://fabriciogg8.github.io/Responsive_design/                                 (Hecho)
+
 https://fabriciogg8.github.io/CSS_frontend_30_5/                                 (No está agarrando el css que tiene en github)
+
+
+BACKEND
+
+https://fabriciogg8.github.io/JavaScript_API_REST_Dogs/ 
