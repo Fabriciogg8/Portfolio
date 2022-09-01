@@ -274,7 +274,6 @@ function showPortfolioBackend(portfolioBackend) {
   } else {
     urlContainer.innerHTML = "View repository";
   }
- 
   pageInfoDivBack.appendChild(urlContainer);
 
   // link to github: an <a> tag
