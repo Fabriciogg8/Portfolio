@@ -85,21 +85,21 @@ const myPortfolios = [
   {
     name: "Responsive Design Heros",
     url: "https://fabriciogg8.github.io/Responsive_design_heros/",
-    image: "./img/Heroes.png",
+    image: "https://imgur.com/HPkFkf2",
     abstract: "Abstract: Page with responsive design, with images of super heroes and a brief description.",
     readme: "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md",
   },
   {
     name: "Frontend Bonsai Market",
     url: "https://fabriciogg8.github.io/Frontend-BonsaiMarket/",
-    image: "./img/bonsai.png",
+    image: "https://imgur.com/c1ZupWy",
     abstract: "Abstract: Example Market page, with bonsai trees.",
     readme: "",
   },
   {
     name: "Frontend Page DH",
     url: "https://fabriciogg8.github.io/Frontend-DH-Page/",
-    image: "./img/dhpage.png",
+    image: "https://imgur.com/5nF7P6a",
     abstract: "Abstract: Development of a web page, from a model.",
     readme: "https://github.com/Fabriciogg8/Frontend-DH-Page/blob/main/README.md",
   },
@@ -110,7 +110,7 @@ const miPortafolio = [
   {
     name: "Héroes Diseño Responsivo",
     url: "https://fabriciogg8.github.io/Responsive_design_heros/",
-    image: "./img/Heroes.png",
+    image: "https://imgur.com/HPkFkf2",
     abstract:
       "Resumen: Página con diseño responsivo, con imágenes de súper héroes y una breve descripción.",
     readme:
@@ -119,14 +119,14 @@ const miPortafolio = [
   {
     name: "Frontend Mercado Bonsai",
     url: "https://fabriciogg8.github.io/Frontend-BonsaiMarket/",
-    image: "./img/bonsai.png",
+    image: "https://imgur.com/c1ZupWy",
     abstract: "Resumen: Ejemplo de página mercado, con árboles bonsai.",
     readme: "",
   },
   {
     name: "Frontend Página DH",
     url: "https://fabriciogg8.github.io/Frontend-DH-Page/",
-    image: "./img/dhpage.png",
+    image: "https://imgur.com/5nF7P6a",
     abstract: "Resumen: Desarrollo de una página web, a partir de un modelo.",
     readme: "https://github.com/Fabriciogg8/Frontend-DH-Page/blob/main/README.md",
   },
@@ -199,21 +199,21 @@ const myPortfolioBackend = [
   {
     name: "JavaScript API REST Dogs",
     url: "https://fabriciogg8.github.io/JavaScript_API_REST_Dogs/",
-    image: "./img/javascript_api.jpg",
+    image: "https://imgur.com/Kbxo6l7",
     abstract: "Abstract: Consume a REST API with JavaScript. Realize the communication flow between Frontend and Backend and make asynchronous requests using fetch.",
     readme: "https://github.com/Fabriciogg8/JavaScript_API_REST_Dogs#readme",
   },
   {
     name: "JAVA Basic",
     url: "https://github.com/Fabriciogg8/Java_basics",
-    image: "./img/JavaLogo.png",
+    image: "https://imgur.com/0vhpADd",
     abstract: "Abstract: Resolutions of basic exercises with JAVA language",
     readme: "https://github.com/Fabriciogg8/Java_basics"
   },
   {
     name: "Flask CRUD",
     url: "https://github.com/Fabriciogg8/Flask_CRUD",
-    image: "./img/flask.png",
+    image: "https://imgur.com/DbEp564",
     abstract: "Abstract: Create, Read, Update, Delete with FLASK",
     readme : "https://github.com/Fabriciogg8/Flask_CRUD/blob/master/README.md"
   },
@@ -224,21 +224,21 @@ const miPortafolioBackend = [
   {
       name: "JavaScript API REST Dogs",
       url: "https://fabriciogg8.github.io/JavaScript_API_REST_Dogs/",
-      image: "./img/javascript_api.jpg",
+      image: "https://imgur.com/Kbxo6l7",
       abstract: "Resumen: Consumir una API REST con JavaScript. Realizar el flujo de comunicación entre Frontend y Backend y hacer solicitudes asíncronas usando fetch.",
       readme: "https://github.com/Fabriciogg8/JavaScript_API_REST_Dogs#readme",
   },
   {
     name: "JAVA Basico",
     url: "https://github.com/Fabriciogg8/Java_basics",
-    image: "./img/JavaLogo.png",
+    image: "https://imgur.com/0vhpADd",
     abstract: "Resumen: Resoluciones de ejercicios basicos con lenguaje JAVA",
     readme: "https://github.com/Fabriciogg8/Java_basics"
   },
   {
     name: "Flask CRUD",
     url: "https://github.com/Fabriciogg8/Flask_CRUD",
-    image: "./img/flask.png",
+    image: "https://imgur.com/DbEp564",
     abstract: "Resumen: Crear, Leer, Actualizar, Borrar con FLASK",
     readme : "https://github.com/Fabriciogg8/Flask_CRUD/blob/master/README.md"
   },
