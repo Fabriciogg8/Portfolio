@@ -86,20 +86,22 @@ const myPortfolios = [
     name: "Responsive Design Heros",
     url: "https://fabriciogg8.github.io/Responsive_design_heros/",
     image: "./img/Heroes.png",
-    abstract:
-      "Abstract: Page with responsive design, with images of super heroes and a brief description.",
-    readme:
-      "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md",
+    abstract: "Abstract: Page with responsive design, with images of super heroes and a brief description.",
+    readme: "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md",
   },
   {
-    name: "Frontend Developer Practic",
-    url: "https://fabriciogg8.github.io/Responsive_design_heros/",
-    image: "./img/3.png",
+    name: "Frontend Bonsai Market",
+    url: "https://fabriciogg8.github.io/Frontend-BonsaiMarket/",
+    image: "./img/bonsai.png",
+    abstract: "Abstract: Example Market page, with bonsai trees.",
+    readme: "",
   },
   {
-    name: "API Dogs JavaScript",
-    url: "https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html",
-    image: "./img/JS_perros.png",
+    name: "Frontend Page DH",
+    url: "https://fabriciogg8.github.io/Frontend-DH-Page/",
+    image: "./img/dhpage.png",
+    abstract: "Abstract: Development of a web page, from a model.",
+    readme: "https://github.com/Fabriciogg8/Frontend-DH-Page/blob/main/README.md",
   },
 ];
 
@@ -115,14 +117,18 @@ const miPortafolio = [
       "https://github.com/Fabriciogg8/Responsive_design_heros/blob/main/Readme.md",
   },
   {
-    name: "Practico Frontend Developer",
-    url: "https://fabriciogg8.github.io/Responsive_design/",
-    image: "./img/3.png",
+    name: "Frontend Mercado Bonsai",
+    url: "https://fabriciogg8.github.io/Frontend-BonsaiMarket/",
+    image: "./img/bonsai.png",
+    abstract: "Resumen: Ejemplo de página mercado, con árboles bonsai.",
+    readme: "",
   },
   {
-    name: "API Perros JavaScript",
-    url: "https://fabriciogg8.github.io/JavaScript_API_REST/Code/index.html",
-    image: "./img/JS_perros.png",
+    name: "Frontend Página DH",
+    url: "https://fabriciogg8.github.io/Frontend-DH-Page/",
+    image: "./img/dhpage.png",
+    abstract: "Resumen: Desarrollo de una página web, a partir de un modelo.",
+    readme: "https://github.com/Fabriciogg8/Frontend-DH-Page/blob/main/README.md",
   },
 ];
 
@@ -134,7 +140,6 @@ function showPortfolioPages(portfolios, boxImg, boxFather) {
   if (contador >= portfolios.length) {
     contador = 0;
   }
-  console.log(portfolios[contador]);
   const divsImages = document.querySelectorAll(boxImg);
   for (div of divsImages) {
     div.setAttribute("src", portfolios[contador].image);
@@ -152,20 +157,23 @@ function showPortfolioPages(portfolios, boxImg, boxFather) {
   pageInfoDiv.classList.add("new-son");
   pageInfoDiv.innerText = portfolios[contador].name;
   // Abstract
-  const abstract = document.createElement("h6");
+  const abstract = document.createElement("p");
   abstract.innerHTML = portfolios[contador].abstract;
   pageInfoDiv.appendChild(abstract);
 
   // url of the repository
   const urlContainer = document.createElement("a");
   urlContainer.setAttribute("href", portfolios[contador].url);
-  urlContainer.innerHTML = "Go Link";
+  if (idiom.textContent == "ESP") {
+    urlContainer.innerHTML = "Ver repositorio";
+  } else {
+    urlContainer.innerHTML = "View repository";
+  }
   pageInfoDiv.appendChild(urlContainer);
 
   // link to github
 
   divFather.appendChild(pageInfoDiv);
-  console.log(portfolios[contador].name);
   contador++;
 
   //I remove the p tag where I had the phrase to click in the pc image
@@ -199,13 +207,15 @@ const myPortfolioBackend = [
     name: "JAVA Basic",
     url: "https://github.com/Fabriciogg8/Java_basics",
     image: "./img/JavaLogo.png",
-    abstract: "Resolutions of basic exercises with JAVA language",
+    abstract: "Abstract: Resolutions of basic exercises with JAVA language",
     readme: "https://github.com/Fabriciogg8/Java_basics"
   },
   {
-    name: "Backend",
-    url: "Backend",
-    image: "./img/3.png",
+    name: "Flask CRUD",
+    url: "https://github.com/Fabriciogg8/Flask_CRUD",
+    image: "./img/flask.png",
+    abstract: "Abstract: Create, Read, Update, Delete with FLASK",
+    readme : "https://github.com/Fabriciogg8/Flask_CRUD/blob/master/README.md"
   },
 ];
 
@@ -222,13 +232,15 @@ const miPortafolioBackend = [
     name: "JAVA Basico",
     url: "https://github.com/Fabriciogg8/Java_basics",
     image: "./img/JavaLogo.png",
-    abstract: "Resoluciones de ejercicios basicos con lenguaje JAVA",
+    abstract: "Resumen: Resoluciones de ejercicios basicos con lenguaje JAVA",
     readme: "https://github.com/Fabriciogg8/Java_basics"
   },
   {
-    name: "Backend",
-    url: "Backend",
-    image: "./img/3.png",
+    name: "Flask CRUD",
+    url: "https://github.com/Fabriciogg8/Flask_CRUD",
+    image: "./img/flask.png",
+    abstract: "Resumen: Crear, Leer, Actualizar, Borrar con FLASK",
+    readme : "https://github.com/Fabriciogg8/Flask_CRUD/blob/master/README.md"
   },
 ];
 
@@ -261,8 +273,8 @@ function showPortfolioBackend(portfolioBackend) {
   underlineTitle.innerText = portfolioBackend[contadorTwo].name;
   pageInfoDivBack.appendChild(underlineTitle);
 
-  // Abstract: h6 tag
-  const abstractBack = document.createElement("h6");
+  // Abstract: p tag
+  const abstractBack = document.createElement("p");
   abstractBack.innerHTML = portfolioBackend[contadorTwo].abstract;
   pageInfoDivBack.appendChild(abstractBack);
 
@@ -284,7 +296,6 @@ function showPortfolioBackend(portfolioBackend) {
 
   // Append the div with the info to the father
   divBackFather.appendChild(pageInfoDivBack);
-  console.log("Contador es = " + contadorTwo)
 
   //I remove the p tag where I had the phrase to click in the pc image
   let clickTile = document.querySelector(".disable-two");
@@ -292,3 +303,24 @@ function showPortfolioBackend(portfolioBackend) {
     clickTile.remove();
   }
 }
+
+
+/***************************************************
+ Logic to change the world icon size
+ ****************************************************/
+
+// fa-2x
+// fa-4x
+
+const mediaquery = window.matchMedia("(mon-width: 480px)");
+function funcion() {
+  const earthIcon = document.querySelector(".fa-earth-americas");
+  console.log(earthIcon);
+  if (mediaquery.matches) {
+    earthIcon.classList.remove(".fa-2x");
+    earthIcon.classList.add(".fa-4x");
+    console.log(earthIcon);
+  } 
+}
+
+mediaquery.addEventListener("load", funcion());

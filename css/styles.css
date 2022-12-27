@@ -31,7 +31,7 @@ header {
     background-size: 150% 100%;
     background-position: center center;
     height: 30rem;
-    font-family: var(--font_2)
+    font-family: var(--font_2);
 }
 
 /* Navigation Bar */
@@ -39,6 +39,12 @@ header {
 .header-nav {
     display: flex;
     width: 100%;
+}
+
+/* Dont show the desktop navbar */
+
+.desktop{
+    display: none;
 }
 
 /* Hamburguer */
@@ -114,6 +120,15 @@ header {
 
 /* My name container */
 
+#fabricio{
+    position: absolute;
+    top: 5rem;
+    left: 10vw;
+    padding-right: 1rem;
+    height: 300px;
+    border-radius: 30%;
+}
+
 .header-name{
     font-family: var(--font_1);
     color: var(--color_one);
@@ -122,17 +137,47 @@ header {
     font-size: 2.5rem;
     font-weight: 400;
     top: 12rem;
-    text-align: center
+    text-align: center;
+    -webkit-text-stroke: 0.8px rgb(37, 23, 23); 
+}
+
+.cv a{ 
+    position: absolute;
+    top: 18rem;
+    left: 45%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color_four);
+    color: var(--color_two);
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 25px;
+    box-shadow: 0px 30px 70px -5px var(--color_two);
+    width: 150px;
+    height: 50px;
+    transition: color 100ms, background-color 300ms;
+}
+.cv:hover a{
+    color: var(--color_four);
+    background-color: var(--color_two);
+    border: 2px var(--color_six) solid;
+    animation-name: inflate;
+    animation-duration: 4s;
 }
 
 /*  Brief */
 .header-brief{
+    font-family: var(--font_2);
     color: var(--color_one);
     position: absolute;
-    top: 15rem;
-    left:15rem;
-    text-align: justify;
-    width: 10rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    top: 23.5rem;
+    left: 5%;
+    padding-right: 2rem;
 }
 
 
@@ -177,9 +222,9 @@ section{
 .number{
     color: var(--color_four);
     position: absolute;
-    font-size: large;
+    font-size: 1.5rem;
     font-family: var(--font_1);
-    top:1.5rem;
+    top:1.8rem;
     right:1rem;
 }
 
@@ -189,7 +234,7 @@ section{
     width: 0.8rem;
     border-radius: 50% 0 0 50% ;
     position: absolute;
-    top:2rem;
+    top:2.5rem;
     right:0rem;
 }
 
@@ -197,11 +242,11 @@ section{
 .about-me p{
     color: var(--color_one);
     font-family: var(--font_2);
-    text-align: left;
+    font-size: 1rem;
+    text-align:justify;
     position: absolute;
     top: 5rem;
     padding: 0 2rem;
-    
 }
 
 /*  Education  */
@@ -250,7 +295,6 @@ section{
     background-color: var(--color_five);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     position: relative;
     height: 45rem;
 }
@@ -266,8 +310,7 @@ section{
 }
 
 .portfolio-article{
-    margin-top: 3rem;
-    padding: 0 2rem 0 2rem;
+    padding: 2rem 1.5rem 0 1.5rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -290,6 +333,7 @@ section{
     font-weight: 400;
     font-size: medium;
     height: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 /*  Style to div created in JavaScript*/
@@ -297,12 +341,12 @@ section{
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
-    align-items: center;
+    align-items:center;
     color: var(--color_two);
     font-size: medium;
 }
 
-.new-son h6{
+.new-son p{
     color: var(--color_two);
     font-family: var(--font_2);
     font-size: 0.8rem;
@@ -335,6 +379,10 @@ section{
     margin-bottom: 1rem;
   }
   
+.carouselTwo img {
+    cursor: pointer;
+}
+
 ul.slides {
   display: block;
   position: relative;
@@ -540,6 +588,9 @@ i:hover{
     color: #E1306C;
 }
 
+.fa-square-github {
+    color: black;
+}
 
 @keyframes spin {
     20% {transform: scale(50%);}
@@ -547,8 +598,131 @@ i:hover{
     60% {transform: scale(150%);}
     }
 
-
+@keyframes inflate {
+    40% {transform: scale(140%)}
+    /* 50% {transform:rotate(45deg)} */
+}
 /*  Inactive class (it is the last one because it overwrites the other styles) */
 .inactive{
     display: none;
+}
+
+
+@media(min-width:480px){
+    #hamburguer{
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
+
+    .header-nav-ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        width: 90vw;
+        justify-content: space-evenly;
+    }
+
+    .header-nav-ul a li{
+        font-size: 1.2rem;
+    }
+
+    /*  Button that change the language */
+
+    .language {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    }
+
+    /* Span that change the name language */
+
+    #idiom {
+        font-size: large;
+    }
+
+    .inactive{
+        display: none;
+    }
+
+    /* Header name */
+    .header-name{
+        font-size: 4rem;
+    }
+
+    /* All h1 font-size */
+    .about-me h1 {
+        font-size: 2rem;
+    }
+
+    /* Line under the section title*/
+    .line {
+        width: 13rem;
+    }
+
+    /* Number and line at the rigth of the window*/
+    .number {
+        font-size: 3rem;
+        top: 1rem;
+        right: 2rem;
+    }
+    .number-line {
+        width: 8rem;
+        top: 3.8rem;
+    }
+
+    /* Paragraph */
+    .about-me p {
+        font-size: 1.2rem;
+        top: 6rem;
+        margin-bottom: 1vw;
+    }
+
+    /*  Education  */
+
+    .education h1 {
+        font-size: 2rem;
+    }
+
+    .article {
+        top: 5rem;
+        left: 10vw;
+        padding-right: 1rem;
+    }
+
+    .article h1 {
+        font-size: 1.6rem;
+    }
+
+    .article p {
+        font-size: 1.4rem;
+    }
+
+     /*  Portfolio  */
+   
+    .portfolio h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio h2 {
+        font-size: 1.8rem;
+    }
+
+    .new-son p{
+        font-size: 1.0rem;
+        padding: .5rem 0 .5rem 0;
+    }
+
+    .new-son a{
+        font-size: 1.4rem;
+        padding: .5rem 0 .5rem 0;
+    }
+}
+@media(max-width:480px){
+    .header-brief{
+        left: 4%;
+        
+    }
 }
