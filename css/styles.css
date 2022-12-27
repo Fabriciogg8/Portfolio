@@ -149,11 +149,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--color_three);
     background-color: var(--color_four);
-    color: var(--color_two);
+    border: 2px var(--color_six) solid;
     font-size: 0.8rem;
     font-weight: 700;
-    border-style: none;
+    /* border-style: none; */
     border-radius: 25px;
     box-shadow: 0px 30px 70px -5px var(--color_two);
     width: 150px;
@@ -723,6 +724,9 @@ i:hover{
 @media(max-width:480px){
     .header-brief{
         left: 4%;
-        
-    }
-}
+    }}
+@media(max-width:550px){
+    .cv a{
+        top: 25rem;
+        left: 35%;
+    }}
