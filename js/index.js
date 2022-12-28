@@ -103,6 +103,14 @@ const myPortfolios = [
     abstract: "Abstract: Development of a web page, from a model.",
     readme: "https://github.com/Fabriciogg8/Frontend-DH-Page/blob/main/README.md",
   },
+  {
+    name: "DOM Manipulation",
+    url: "https://fabriciogg8.github.io/JavaScript_DOM_Aguacate/",
+    image: "https://imgpile.com/images/dnyupE.jpg",
+    abstract: "Abstract: Use of fetch to bring the data and create the nodes to display the information in the html.",
+    readme: "https://github.com/Fabriciogg8/JavaScript_DOM_Aguacate",
+  },
+
 ];
 
 // Spanish Potfolio Frontend
@@ -129,6 +137,13 @@ const miPortafolio = [
     image: "https://imgpile.com/images/dndIzN.png",
     abstract: "Resumen: Desarrollo de una página web, a partir de un modelo.",
     readme: "https://github.com/Fabriciogg8/Frontend-DH-Page/blob/main/README.md",
+  },
+  {
+    name: "Manipulación DOM",
+    url: "https://fabriciogg8.github.io/JavaScript_DOM_Aguacate/",
+    image: "https://imgpile.com/images/dnyupE.jpg",
+    abstract: "Resumen: Utilización de fetch para traer los datos y crear los nodos para mostrar la informacion en el html",
+    readme: "https://github.com/Fabriciogg8/JavaScript_DOM_Aguacate",
   },
 ];
 
